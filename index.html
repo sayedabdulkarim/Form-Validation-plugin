@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-6 m-auto" id="form">
+                <center><b class="registration">Registration Form</b></center>
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Username :</label>
+                        <input type="text" id="user" name="name" class="form-control text" placeholder="Enter Username" autocomplete="off">
+                        <span class="text-danger font-weight-bold" id="UserName"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email :</label>
+                        <input type="email" name="email" class="form-control text" id="mail" placeholder="Enter Email" autocomplete="off">
+                        <span class="text-danger font-weight-bold" id="mailtext"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password :</label>
+                        <input type="password" name="pass" class="form-control text" placeholder="Enter Password" id="pswrd">
+                        <span class="text-danger font-weight-bold" id="pswrdtext"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Confirm Password :</label>
+                        <input type="password" name="pass" class="form-control text" placeholder="Confirm Password" id="Cnpswrd">
+                        <span class="text-danger font-weight-bold" id="Cnpswrdtext"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Mobile No. :</label>
+                        <input type="text" name="Mobile" class="form-control text" id="mobileno" placeholder="Enter Mobile Number">
+                        <span class="text-danger font-weight-bold" id="mobilenotext"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Date Of Birth :</label>
+                        <input type="date" name="DOB" class="form-control text" placeholder="Enter DOB" id="dob">
+                        <span class="text-danger font-weight-bold" id="dobtext"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Select Gender :</label>
+                        <select name="" class="form-control text" id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <span class="text-danger font-weight-bold" id="gendertext"></span>
+                    </div>
+                    <div>
+                        <div class='form-group'>
+                            <label for="">Address : </label>
+                            <textarea class="form-control" rows="3" placeholder="Enter your Full Address" id="address"></textarea>
+                            <span class="text-danger font-weight-bold" id="addresstext"></span>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="submit" class="btn btn-primary" value="SUBMIT">
+                        <input type="reset" class="btn btn-danger" value="RESET">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+    $('#user').myuser();
+    $('#mail').myemail();
+    $('#pswrd').mypass();
+    $('#mobileno').mynum();
+    $('#address').myaddres();
+    $('#Cnpswrd').confirm();
+    </script>
+</body>
+
+</html>
